@@ -94,13 +94,47 @@ nav a:hover{
   .nav {
     padding: 0 8px;
   }
-
-  nav {
-    gap: 2px;
-  }
-
-  nav a {
+   nav a {
     padding: 8px 4px;
     font-size: 12px;
   }
+}
+
+.profile-card {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  margin: 24px auto 0;
+  min-height:auto;
+  padding: 16px;
+  box-sizing: border-box;
+  background: linear-gradient(120deg, #a4f3f1, #83b2e4, #b69df1, #fbb8b8, #a1f3f1);
+  background-size: 300% 300%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:10px;
+  border: 1px dashed #201d41;
+  animation: profile-gradient 8s ease infinite;
+}
+
+@keyframes profile-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-card {
+    animation: none;
+    background-position: center;
+  }
+}
+.prof{
+  width:20%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #201d41;
+  align-items: center;
 }
