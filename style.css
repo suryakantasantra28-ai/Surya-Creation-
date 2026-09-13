@@ -1,5 +1,10 @@
 body{margin: 0%;}
 
+.menu{
+  position:sticky;
+  top:0;
+}
+
 .ribon{display: flex;
  justify-content: center;
  background: linear-gradient(90deg, #fff1a8, #ffd6a5, #bde0fe, #caffbf, #fff1a8);
@@ -23,9 +28,9 @@ body{margin: 0%;}
 }
 
 @keyframes typing-loop {
-  0%, 12% { width: 30ch; }
+  0%, 10% { width: 37ch; }
   50%, 60% { width: 0; }
-  100% { width: 30ch; }
+  100% { width: 37ch; }
 }
 
 @keyframes ribbon-gradient {
@@ -72,16 +77,18 @@ animation: spin 8s linear infinite;
 
 .button-bar{
   display: flex;
-  align-items: center;
+  align-items: center; 
 }
 
 nav a{
   color:rgb(172, 252, 252);
-    transition:.5s ease-in-out;
+    transition:.5s ease-out;
   text-decoration: none;
   border-radius: 6px;
   padding: 8px 10px;
   font-size: 16px;
+  font-family:fangsong, sans-serif;
+  letter-spacing: 0.7px;
 }
 
 nav a:hover{
@@ -100,7 +107,6 @@ nav a:hover{
 }
 
 .profile-card {
-  position: relative;
   z-index: 1;
   width: 80%;
   margin: 24px auto 0;
@@ -150,7 +156,7 @@ nav a:hover{
 }
 
 .profile-text h2,
-.profile-text h3 {
+.profile-text h4 {
   margin: 0;
 }
 
