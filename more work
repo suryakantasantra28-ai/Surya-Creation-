@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Surya Creation </title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="asset/SURYA CREATION CIRCUL.svg">
+  </head>
+  <body>
+    <div class="menu">
+      <div class="ribon">
+        <h2 class="ribbon-text" aria-label="Welcome to Surya Creation">WELCOME TO SURYA CREATION</h2>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="logo">
+    <img src="asset/SURYA CREATION CIRCUL.svg" width="40px" height="40px">
+    </div>
+    <div class="button-bar">
+      <nav>
+      <a href="#profile"><b>Profile</b></a>
+      <a href="#works"><b>Works</b></a>
+      <a href="#service"><b>Service</b></a>
+      <a href="#contact"><b>Contact</b></a>
+      <a href="#feedback"><b>Feedback</b></a>
+      </nav>
+    </div>
+  </div>
+</div>
+  <div class="profile-card" id="profile">
+    <img src="asset/prof.jpg" class="prof">
+    <div class="profile-text">
+      <h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Mr. Surya Kanta Santra</h2>
+      <h4 style="margin: 0;">Intermediate graphic designer & video editor.</h4>
+    </div>
+  </div>
+  </body>
+</html>
