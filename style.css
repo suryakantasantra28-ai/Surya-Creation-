@@ -160,3 +160,43 @@ nav a:hover{
   margin: 0;
 }
 
+.service-label{
+  position: relative;
+  margin: 20px auto 0;
+  height: auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  background: #ffbe4e;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  text-align: right;
+  animation: slider 20s linear infinite;
+}
+
+ @keyframes slider { 
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+ .works
+ { margin:10px auto;
+ width: 95%;
+height:auto
+border: 2px solid blue;
+border-radius: 10px;}
