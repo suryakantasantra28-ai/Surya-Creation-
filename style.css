@@ -161,7 +161,6 @@ nav a:hover{
 }
 
 .service-label{
-  position: relative;
   margin: 20px auto 0;
   height: auto;
   width: 90%;
@@ -175,10 +174,10 @@ nav a:hover{
 }
 
 .slider {
-  position: relative;
   display: inline-block;
   font-size: 40px;
   text-align: right;
+  display: flex;
   animation: slider 20s linear infinite;
 }
 
@@ -196,7 +195,17 @@ nav a:hover{
 
  .works
  { margin:10px auto;
- width: 95%;
-height:auto
-border: 2px solid blue;
-border-radius: 10px;}
+ width:20%;
+display: flex;
+}
+.more-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #201d41;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
