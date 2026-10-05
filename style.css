@@ -20,6 +20,7 @@ body {
 .menu{
   position:sticky;
   top:0;
+  z-index:1000;
 }
 
 .ribon{display:flex;
@@ -180,6 +181,8 @@ nav a:hover{
 }
 
 .service-label{
+  position: relative;
+  isolation: isolate;
   margin: 20px auto 0;
   height: auto;
   width: 90%;
@@ -200,6 +203,12 @@ nav a:hover{
   gap: 20px;
 }
 
+@media (max-width: 640px) {
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 .service-card {
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(32, 29, 65, 0.2);
@@ -207,7 +216,18 @@ nav a:hover{
   padding: 20px 18px;
   box-shadow: 0 8px 20px rgba(32, 29, 65, 0.12);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  animation: fadeIn 1s ease forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .service-card-img {
@@ -237,8 +257,7 @@ nav a:hover{
 }
 
 .slider {
-  font-size: 40px;
-  position: relative;
+  font-size: 2.5rem;
   text-align: center;
   display:flex;
   width: max-content;
@@ -248,53 +267,31 @@ nav a:hover{
 
 @keyframes slide {
   0% {
-    transform: translateX(-200%);
-  }
-  0% {
     transform: translateX(200%);
   }
-  100% {
+  50% {
     transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(200%);
   }
 }
 
 .works {
-  width: min(30%, auto);
-  max-width: 100%;
+  width: 30%;
+  max-width: 90%;
   margin: 20px auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.works .carousel {
-  width: 100%;
-  max-width: 900px;
-}
-
-.works .carousel-item img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .works {
-    width: min(92%, 700px);
+    width: 80%;
   }
 }
 
-@media (max-width: 480px) {
-  .works {
-    width: 95%;
-  }
-
-  .works .carousel-item img {
-    height: 240px;
-  }
-}
 
 a[href="more-work.html"] {
   display: flex;
@@ -322,6 +319,11 @@ a[href="more-work.html"] {
   transform: translateY(-10px);
 
 }
+
+.footer {
+  margin-top: 20px;
+  background-color: #040036df;
+}
 .contact {
   margin: 20px auto;
   width: 80%;
@@ -330,4 +332,86 @@ a[href="more-work.html"] {
 
 .contact h2 {
   margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.social-links a {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  color: #201d41;
+  background: #fff;
+  border-radius: 50%;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+  background: #0091ca;
+  transform: translateY(-3px);
+}
+
+.social-links svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.feedback {
+  width: min(90%, 560px);
+  margin: 24px auto;
+}
+
+.feedback-card {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(32, 29, 65, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(32, 29, 65, 0.12);
+}
+
+.feedback-text h3 {
+  margin: 0 0 16px;
+  color: #201d41;
+  text-align: center;
+}
+
+.feedback form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feedback input,
+.feedback textarea {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid rgba(32, 29, 65, 0.3);
+  border-radius: 8px;
+  font: inherit;
+}
+
+.feedback textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.feedback button {
+  align-self: center;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 24px;
+  background: #201d41;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
 }
