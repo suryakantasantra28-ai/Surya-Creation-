@@ -227,7 +227,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 20px;
+  padding: 5px 20px;
   background: #ffbe4e;
   border-radius: 10px;
   overflow: hidden;
@@ -294,6 +294,25 @@ nav a:hover {
   color: #3d3d3d;
   line-height: 1.6;
   font-size: 15px;
+}
+
+.service-order-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 22px;
+  border-radius: 50px;
+  background: #201d41;
+  color: #acfcfc;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.service-order-button:hover,
+.service-order-button:focus-visible {
+  background: #ff4c31;
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 .slider {
@@ -396,10 +415,26 @@ a[href="more-work.html"] {
   transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
-.social-links a:hover {
+
+.social-links a:hover,
+.social-links a:focus-visible {
   color: #fff;
-  background: #0091ca;
-  transform: translateY(-3px);
+  transform: translateY(-6px) rotate(-8deg);
+}
+
+.social-links a:nth-child(1):hover,
+.social-links a:nth-child(1):focus-visible {
+  background: #1877f2;
+}
+
+.social-links a:nth-child(2):hover,
+.social-links a:nth-child(2):focus-visible {
+  background: linear-gradient(135deg, #9900ff, #de3ce6, #ff541b, #e8ec00, #ffc800);
+}
+
+.social-links a:nth-child(3):hover,
+.social-links a:nth-child(3):focus-visible {
+  background: #0a66c2;
 }
 
 .social-links svg {
